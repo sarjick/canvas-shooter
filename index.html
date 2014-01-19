@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<style>
+*{
+	font-family: Arial, sans-serif;
+
+	-moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.gameContainer{
+	overflow: hidden;
+	width: 1000px;
+	position: relative;
+}
+#gameLayer{	
+	float: left;
+	background-image: url(images/center.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#pushButton{
+	width: 182px;
+	height: 423px;
+	margin: 100px 0 0 15px;
+	position: absolute;
+	opacity: 0.9;
+	border-radius: 20px;
+	overflow: hidden;
+	line-height: 1000px;
+	background-image: url(images/pushButton.png);
+	cursor: pointer;
+}
+.gameContainer .panel{
+	float: left;
+	height: 600px;
+	width: 199px;
+	border-left: 1px dotted #000;
+}
+.endSplash{
+	position: absolute;
+	width: 1000px;
+	height: 600px;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1;
+	display: none;
+}
+.endSplash p{
+	padding: 20px;
+	text-align: center;
+	color: #fff;	
+	font-size: 100px;
+}
+.button{
+	display: block;
+	margin: auto;
+	width: 200px;
+	height: 60px;
+	line-height: 40px;
+	background-color: #EEFFF3;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 30px;
+	color: #000;
+	line-height: 60px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+.infoPanel{
+	position: absolute;
+	width: 200px;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="gameContainer">
+	<div class="endSplash">
+		<p>Mission done!</p>
+		<a class="button">Start</a>
+	</div>
+	<canvas id="gameLayer" width="800" height="600"></canvas>
+	<div class="panel">
+		<div class="infoPanel">Hits: <span id="hitsCount"></span></div>
+		<a id="pushButton">Push</a>
+	</div>
+</div>
+
+<script src="js/Sys.js"></script>
+<script src="js/ImagesManager.js"></script>
+<script src="js/Observable.js"></script>
+<script src="js/Element.js"></script>
+<script src="js/Layer.js"></script>
+<script src="js/AnimationElement.js"></script>
+<script src="js/Hero.js"></script>
+<script src="js/Enemy.js"></script>
+<script src="js/Bullet.js"></script>
+
+<script src="js/Game.js"></script>
+
+</body>
+</html>
